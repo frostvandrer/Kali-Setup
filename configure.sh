@@ -41,4 +41,4 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 
 # Home dir cleanup
-rm -rf Templates Videos Pictures Music Desktop
+rm -rf ~/Templates ~/Videos ~/Pictures ~/Music ~/Desktop
