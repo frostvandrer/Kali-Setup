@@ -10,7 +10,10 @@ sudo apt-get install -y libxcb-render-util0-dev libxcb-shape0-dev libxcb-xfixes0
 sudo apt-get install -y xfce4-terminal
 
 ## Font
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Iosevka.zip
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/RobotoMono.zip
+
+unzip Iosevka.zip -d ~/.local/share/fonts/
 unzip RobotoMono.zip -d ~/.local/share/fonts/
 
 fc-cache -fv
@@ -40,7 +43,7 @@ sudo apt install -y xsel xclip
 cp tmux/.tmux.conf ~/.tmux.conf
 
 # Home dir cleanup
-rm -rf ~/Templates ~/Videos ~/Pictures ~/Music ~/Desktop
+rm -rf ~/Templates ~/Videos ~/Pictures ~/Music ~/Desktop ~/Public
 
 # Terminal
 ## Nord Theme
