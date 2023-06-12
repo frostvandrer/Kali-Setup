@@ -14,6 +14,7 @@ unzip RobotoMono.zip -d ~/.local/share/fonts/
 
 fc-cache -fv
 
+old_pwd=$(pwd)
 mkdir -p ~/
 git clone https://www.github.com/Airblader/i3 i3-gaps
 cd i3-gaps && mkdir -p build && cd build && meson ..
@@ -24,6 +25,7 @@ sudo ninja install
 mkdir -p ~/.config/i3
 mkdir -p ~/.config/compton
 
+cd $old_pwd
 cp i3/config ~/.config/i3/config
 cp i3/i3blocks.conf ~/.config/i3/i3blocks.conf
 cp i3/clipboard_fix.sh ~/.config/i3/clipboard_fix.sh
@@ -33,12 +35,17 @@ cp .fehbg ~/.fehbg
 
 
 # Tmux
-sudo apt install xsel xclip
+sudo apt install -y xsel xclip
 cp tmux/.tmux.conf ~/.tmux.conf
 
-# ohmyzsh
+# Terminal
+## ohmyzsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+## Nord Theme
+git clone https://github.com/nordtheme/xfce-terminal.git
+cd xfce-terminal
+./install.sh
 
 # Home dir cleanup
 rm -rf ~/Templates ~/Videos ~/Pictures ~/Music ~/Desktop
