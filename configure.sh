@@ -14,6 +14,7 @@ unzip RobotoMono.zip -d ~/.local/share/fonts/
 
 fc-cache -fv
 
+mkdir -p ~/
 git clone https://www.github.com/Airblader/i3 i3-gaps
 cd i3-gaps && mkdir -p build && cd build && meson ..
 ninja
@@ -32,7 +33,12 @@ cp .fehbg ~/.fehbg
 
 
 # Tmux
+sudo apt install xsel xclip
 cp tmux/.tmux.conf ~/.tmux.conf
 
 # ohmyzsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+
+# Home dir cleanup
+rm -rf Templates Videos Pictures Music Desktop
