@@ -199,10 +199,9 @@ bar {
         status_command i3blocks -c ~/.config/i3/i3blocks.conf
         i3bar_command i3bar -t
         position top
-        #height 30
+        height 26
+        font pango:RobotoMono Nerd Font Regular 7.5
         
-
-
         colors {
             statusline #EEEEEE
             background #1C1D2B88
