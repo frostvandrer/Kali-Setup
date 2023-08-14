@@ -1,4 +1,2 @@
 #!/bin/sh
-#feh --no-fehbg --bg-fill /home/qurius/Documents/Wallpapers/samurai2.jpg
-feh --no-fehbg --bg-fill /home/qurius/Documents/Wallpapers/hacking_skull.jpg
-#feh --no-fehbg --bg-fill /home/qurius/Documents/Wallpapers/xct_ultrawide.png
+feh --no-fehbg --bg-fill ~/Wallpapers/stargazing.jpg
