@@ -37,6 +37,9 @@ cp i3/clipboard_fix.sh ~/.config/i3/clipboard_fix.sh
 cp compton/compton.conf ~/.config/compton/compton.conf
 cp .fehbg ~/.fehbg
 
+# Wallpaper
+mkdir ~/Wallpapers/
+cp ./Wallpaper/stargazing.jpeg ~/Wallpapers/
 
 # Tmux
 sudo apt install -y xsel xclip
