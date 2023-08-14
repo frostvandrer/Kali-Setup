@@ -141,6 +141,22 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
+
+####################### CUSTOM #######################
+# Alt + Tab to switch between last two used workspaces
+bindsym $mod+Tab exec --no-startup-id i3-msg workspace back_and_forth
+
+# Alt + PgUp/PgDown to the workspaces
+bindsym $mod+Next exec --no-startup-id i3-msg workspace next
+bindsym $mod+Prior exec --no-startup-id i3-msg workspace prev
+
+# rename workspaces
+bindsym $mod+n exec i3-input -F "rename workspace to "$(i3-msg -t get_workspaces | jq -r "map(select(.focused))[0].num"):%s"" -P "New name: "
+
+# clear workspace name
+bindsym $mod+c exec i3-msg "rename workspace to "$(i3-msg -t get_workspaces | jq -r "map(select(.focused))[0].num")""
+####################### CUSTOM #######################
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -189,9 +205,16 @@ bar {
 
         colors {
             statusline #EEEEEE
-            #background #1C1D2B88
-            background #3B4252
-            focused_workspace #A3BE8C #A3BE8C #3B4252
+            background #1C1D2B88
+            
+            #background #1C1D2B98
+            #background #2e344088
+            #background #3B425288
+            focused_workspace #81A1C1 #81A1C1 #3B4252
+
+            # NORD
+            #focused_workspace #88c0d0 #88c0d0 #3B4252
+    
             statusline #D8DEE9
         }
 }
@@ -200,9 +223,14 @@ bar {
 default_border pixel 1
 default_floating_border pixel 1
 
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 2
+bindsym $mod+x floating toggle ; [floating] resize set 2200 1200 ; move position center
 gaps inner 2
 gaps outer 4
+
+#gaps inner 14
+#gaps outer 14
+
 
 # compton - Compositing Manager for Shadows and Opacity
 exec_always --no-startup-id compton -b --config ~/.config/compton/compton.conf
