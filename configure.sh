@@ -27,14 +27,14 @@ sudo ninja install
 
 ## Copy configuration files
 mkdir -p ~/.config/i3
-mkdir -p ~/.config/compton
+mkdir -p ~/.config/picom
 
 cd $old_pwd
 cp i3/config ~/.config/i3/config
 cp i3/i3blocks.conf ~/.config/i3/i3blocks.conf
 cp i3/clipboard_fix.sh ~/.config/i3/clipboard_fix.sh
 
-cp compton/compton.conf ~/.config/compton/compton.conf
+cp picom/picom.conf ~/.config/picom/picom.conf
 cp .fehbg ~/.fehbg
 
 # Wallpaper
