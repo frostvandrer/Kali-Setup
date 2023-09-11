@@ -232,7 +232,7 @@ gaps outer 4
 
 
 # compton - Compositing Manager for Shadows and Opacity
-exec_always --no-startup-id compton -b --config ~/.config/compton/compton.conf
+exec_always --no-startup-id picom -b --config ~/.config/picom/picom.conf
 
 # Make copy paste work
 exec --no-startup-id vmware-user
