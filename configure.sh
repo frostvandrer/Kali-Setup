@@ -39,7 +39,7 @@ cp .fehbg ~/.fehbg
 
 # Wallpaper
 mkdir ~/Wallpapers/
-cp ./Wallpaper/stargazing.jpeg ~/Wallpapers/
+cp ./Wallpaper/htb.png ~/Wallpapers/
 
 # Tmux
 sudo apt install -y xsel xclip
