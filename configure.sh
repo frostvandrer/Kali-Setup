@@ -27,7 +27,7 @@ sudo ninja install
 
 ## Copy configuration files
 mkdir -p ~/.config/i3
-mkdir -p ~/.config/picom
+mkdir -p ~/.config/compton
 
 cd $old_pwd
 cp i3/config ~/.config/i3/config
